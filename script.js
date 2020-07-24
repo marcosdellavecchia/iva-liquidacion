@@ -13,9 +13,10 @@ calcularIva = () => {
   var perAduaneras = document.getElementById("aduaneras-input").value * 1;
   var saldoLibreAnterior = document.getElementById("saldold-input").value * 1;
 
+  //Previene el submit del formulario
   event.preventDefault();
 
-  //Formula para calcular saldo tecnico
+  //Calcular saldo tecnico
   saldoTecnico =
     ivaVenta21 +
     ivaVenta105 +
@@ -28,14 +29,17 @@ calcularIva = () => {
   showSaldoTecnico = document.getElementById("saldotecnico-show");
   showSaldoTecnico.innerHTML = saldoTecnico;
 
-  //Formula para calcular saldo libre disponibilidad
+  //Calcular saldo libre disponibilidad
   saldoLibreDisponibilidad =
     retIva + perIva + perAduaneras + saldoLibreAnterior;
 
   showSaldoLibreDisponibilidad = document.getElementById("saldo-ld-show");
-  showSaldoLibreDisponibilidad.innerHTML = saldoLibreDisponibilidad;
 
-  //Formula para calcular saldo a pagar AFIP
+  if (saldoTecnico <= 0) {
+    showSaldoLibreDisponibilidad.innerHTML = saldoLibreDisponibilidad;
+  }
+
+  //Calcular saldo a pagar AFIP
   saldoAfip = saldoTecnico - saldoLibreDisponibilidad;
 
   showSaldoAfip = document.getElementById("saldo-afip-show");
@@ -50,14 +54,14 @@ mostrarValores = () => {
   var ivaCompra21 = document.getElementById("compra21-input").value * 0.21;
   var ivaCompra105 = document.getElementById("compra105-input").value * 0.105;
   var ivaCompra27 = document.getElementById("compra27-input").value * 0.27;
-  var saldoTecnicoAnterior = document.getElementById("saldotecnico-input")
-    .value;
+  var saldoTecnicoAnterior =
+    document.getElementById("saldotecnico-input").value * 1;
   var retIva = document.getElementById("retenciones-input").value * 1;
   var perIva = document.getElementById("percepciones-input").value * 1;
   var perAduaneras = document.getElementById("aduaneras-input").value * 1;
   var saldoLibreAnterior = document.getElementById("saldold-input").value * 1;
 
-  //Target de campos donde se muestra el valor ingresado / IVA
+  //Target de campos donde va a mostrar el valor ingresado / IVA
   var showIvaVenta21 = document.getElementById("venta21-show");
   var showIvaVenta105 = document.getElementById("venta105-show");
   var showIvaVenta27 = document.getElementById("venta27-show");
@@ -72,16 +76,16 @@ mostrarValores = () => {
     "saldo-ld-anterior-show"
   );
 
-  //Equivalencias
-  showIvaVenta21.innerHTML = ivaVenta21;
-  showIvaVenta105.innerHTML = ivaVenta105;
-  showIvaVenta27.innerHTML = ivaVenta27;
-  showIvaCompra21.innerHTML = ivaCompra21;
-  showIvaCompra105.innerHTML = ivaCompra105;
-  showIvaCompra27.innerHTML = ivaCompra27;
-  showRetIva.innerHTML = retIva;
-  showPerIva.innerHTML = perIva;
-  showPerAduaneras.innerHTML = perAduaneras;
-  showSaldoTecnicoAnterior.innerHTML = saldoTecnicoAnterior;
-  showSaldoLibreAnterior.innerHTML = saldoLibreAnterior;
+  //Mostrar valores y redondear decimales
+  showIvaVenta21.innerHTML = ivaVenta21.toFixed(2);
+  showIvaVenta105.innerHTML = ivaVenta105.toFixed(2);
+  showIvaVenta27.innerHTML = ivaVenta27.toFixed(2);
+  showIvaCompra21.innerHTML = ivaCompra21.toFixed(2);
+  showIvaCompra105.innerHTML = ivaCompra105.toFixed(2);
+  showIvaCompra27.innerHTML = ivaCompra27.toFixed(2);
+  showRetIva.innerHTML = retIva.toFixed(2);
+  showPerIva.innerHTML = perIva.toFixed(2);
+  showPerAduaneras.innerHTML = perAduaneras.toFixed(2);
+  showSaldoTecnicoAnterior.innerHTML = saldoTecnicoAnterior.toFixed(2);
+  showSaldoLibreAnterior.innerHTML = saldoLibreAnterior.toFixed(2);
 };
