@@ -2,11 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
 }
 body {
   background-color: #fafafa !important;
 }
-
+.row:hover {
+  background-color: #d0d3d4;
+}
 .encabezado-principal {
   background-color: #5583a9;
   color: #fafafa;

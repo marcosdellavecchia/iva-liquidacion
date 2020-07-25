@@ -11,6 +11,10 @@
       crossorigin="anonymous"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Liquidación IVA</title>
   </head>
@@ -23,24 +27,26 @@
         <div class="col-md-12 encabezado">Detalle de ventas</div>
       </div>
       <div class="row">
-        <div class="col-md-6">Venta al 21%</div>
-        <div id="venta21-show" class="col-md-3 data-container" name="show">0</div>
+        <div class="col-md-6">Ventas gravadas al 21%</div>
+        <div id="venta21-show" class="col-md-3 data-container" name="show">
+          0
+        </div>
         <div class="col-md-3 valor-container">
-          <input id="venta21-input" class="valor" type="number" step="0.01"/>
+          <input id="venta21-input" class="valor" type="number" step="0.01" />
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6">Venta al 10,5%</div>
+        <div class="col-md-6">Ventas gravadas al 10,5%</div>
         <div id="venta105-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="venta105-input" class="valor" type="number" step="0.01"/>
+          <input id="venta105-input" class="valor" type="number" step="0.01" />
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6">Venta al 27%</div>
+        <div class="col-md-6">Ventas gravadas al 27%</div>
         <div id="venta27-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="venta27-input" class="valor" type="number" step="0.01"/>
+          <input id="venta27-input" class="valor" type="number" step="0.01" />
         </div>
       </div>
       <br />
@@ -48,35 +54,42 @@
         <div class="col-md-12 encabezado">Detalle de compras y gastos</div>
       </div>
       <div class="row">
-        <div class="col-md-6">Compras al 21%</div>
+        <div class="col-md-6">Compras gravadas al 21%</div>
         <div id="compra21-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="compra21-input" class="valor" type="number" step="0.01"/>
+          <input id="compra21-input" class="valor" type="number" step="0.01" />
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6">Compras al 10,5%</div>
+        <div class="col-md-6">Compras gravadas al 10,5%</div>
         <div id="compra105-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="compra105-input" class="valor" type="number" step="0.01"/>
+          <input id="compra105-input" class="valor" type="number" step="0.01" />
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6">Compras al 27%</div>
+        <div class="col-md-6">Compras gravadas al 27%</div>
         <div id="compra27-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="compra27-input" class="valor" type="number" step="0.01"/>
+          <input id="compra27-input" class="valor" type="number" step="0.01" />
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">Saldo técnico a favor del período anterior</div>
         <div id="saldo-tecnico-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="saldotecnico-input" class="valor" type="number" step="0.01"/>
+          <input
+            id="saldotecnico-input"
+            class="valor"
+            type="number"
+            step="0.01"
+          />
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6">Saldo técnico a favor de AFIP (+) / del contribuyente (-)</div>
+        <div class="col-md-6">
+          Saldo técnico a favor de AFIP (+) / del contribuyente (-)
+        </div>
         <div id="saldotecnico-show" class="col-md-3 data-container">0</div>
       </div>
       <br />
@@ -87,21 +100,31 @@
         <div class="col-md-6">Retenciones IVA</div>
         <div id="retenciones-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="retenciones-input" class="valor" type="number" step="0.01"/>
+          <input
+            id="retenciones-input"
+            class="valor"
+            type="number"
+            step="0.01"
+          />
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">Percepciones IVA</div>
         <div id="percepciones-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="percepciones-input" class="valor" type="number" step="0.01"/>
+          <input
+            id="percepciones-input"
+            class="valor"
+            type="number"
+            step="0.01"
+          />
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">Percepciones aduaneras</div>
         <div id="aduaneras-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="aduaneras-input" class="valor" type="number" step="0.01"/>
+          <input id="aduaneras-input" class="valor" type="number" step="0.01" />
         </div>
       </div>
       <div class="row">
@@ -110,7 +133,7 @@
         </div>
         <div id="saldo-ld-anterior-show" class="col-md-3 data-container">0</div>
         <div class="col-md-3 valor-container">
-          <input id="saldold-input" class="valor" type="number" step="0.01"/>
+          <input id="saldold-input" class="valor" type="number" step="0.01" />
         </div>
       </div>
       <div class="row">
@@ -120,11 +143,22 @@
         <div id="saldo-ld-show" class="col-md-3 data-container">0</div>
       </div>
       <div class="row">
-        <div class="col-md-6">Saldo a favor de AFIP (+) / del contribuyente (-)</div>
+        <div class="col-md-6">
+          Saldo a favor de AFIP (+) / del contribuyente (-)
+        </div>
         <div id="saldo-afip-show" class="col-md-3 data-container">0</div>
       </div>
-      <input id="calcular" class="calcular" type="submit" onclick="calcularIva()">
-      </button>
+      <br />
+      <br />
+      <div class="row">
+        <div class="col-md-5"></div>
+        <input
+          id="calcular"
+          class="col-md-2 calcular"
+          type="submit"
+          onclick="calcularIva()"
+        />
+      </div>
     </form>
 
     <script src="script.js"></script>
