@@ -19,13 +19,7 @@
     <title>Liquidación IVA</title>
   </head>
   <body>
-    <form
-      class="container"
-      id="liquidacion"
-      name="liquidacion"
-      action=""
-      onchange="mostrarValores()"
-    >
+    <form class="container" id="liquidacion" name="liquidacion" action="">
       <div class="row">
         <div class="col-md-12 encabezado-principal">Liquidacion IVA</div>
       </div>
@@ -163,9 +157,9 @@
         <input
           id="calcular"
           class="col-md-2 btn btn-success"
-          type=""
+          onfocus=""
+          type="button"
           value="Calcular"
-          onclick="calcularIva()"
         />
         <input
           id="calcular"

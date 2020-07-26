@@ -40,6 +40,17 @@ input {
   display: flex;
   justify-content: flex-end;
 }
+#saldotecnico-show,
+#saldo-ld-show,
+#saldo-afip-show {
+  font-weight: 600;
+}
+.saldo-favor {
+  color: green !important;
+}
+.saldo-pagar {
+  color: red !important;
+}
 
 /* -------------- Elimina arrows del imput number -------------- */
 

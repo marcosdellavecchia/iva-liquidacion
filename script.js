@@ -1,3 +1,14 @@
+liquidacion = document.getElementById("liquidacion");
+liquidacion.addEventListener("change", () => {
+  mostrarValores();
+});
+
+calcular = document.getElementById("calcular");
+calcular.addEventListener("click", () => {
+  calcularIva();
+  cambiarColores();
+});
+
 calcularIva = () => {
   //Target de inputs
   var ivaVenta21 = document.getElementById("venta21-input").value * 0.21;
@@ -87,4 +98,44 @@ mostrarValores = () => {
   showPerAduaneras.innerHTML = perAduaneras.toFixed(2);
   showSaldoTecnicoAnterior.innerHTML = saldoTecnicoAnterior.toFixed(2);
   showSaldoLibreAnterior.innerHTML = saldoLibreAnterior.toFixed(2);
+};
+
+//Cambiar color según sea saldo a favor o a pagar
+cambiarColores = () => {
+  //Saldo tecnico
+  showSaldoTecnico = document.getElementById("saldotecnico-show");
+
+  if (showSaldoTecnico.innerHTML > 0) {
+    showSaldoTecnico.classList.add("saldo-pagar");
+    showSaldoTecnico.classList.remove("saldo-favor");
+  } else if (showSaldoTecnico.innerHTML < 0) {
+    showSaldoTecnico.classList.add("saldo-favor");
+    showSaldoTecnico.classList.remove("saldo-pagar");
+  } else {
+    showSaldoTecnico.classList.remove("saldo-pagar");
+    showSaldoTecnico.classList.remove("saldo-favor");
+  }
+
+  //Saldo libre disponibilidad
+  showSaldoLibreDisponibilidad = document.getElementById("saldo-ld-show");
+
+  if (showSaldoLibreDisponibilidad.innerHTML > 0) {
+    showSaldoLibreDisponibilidad.classList.add("saldo-favor");
+  } else {
+    showSaldoLibreDisponibilidad.classList.remove("saldo-favor");
+  }
+
+  //Saldo AFIP
+  showSaldoAfip = document.getElementById("saldo-afip-show");
+
+  if (showSaldoAfip.innerHTML > 0) {
+    showSaldoAfip.classList.add("saldo-pagar");
+    showSaldoAfip.classList.remove("saldo-favor");
+  } else if (showSaldoAfip.innerHTML < 0) {
+    showSaldoAfip.classList.add("saldo-favor");
+    showSaldoAfip.classList.remove("saldo-pagar");
+  } else {
+    showSaldoAfip.classList.remove("saldo-pagar");
+    showSaldoAfip.classList.remove("saldo-favor");
+  }
 };
