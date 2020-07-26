@@ -8,11 +8,26 @@
 body {
   background-color: #fafafa !important;
 }
+
+input {
+  text-align: right;
+  padding-right: 13px;
+  width: 60%;
+}
 .row:hover {
   background-color: #d0d3d4;
 }
+.calcular:hover {
+  background-color: #fafafa;
+}
+.btn {
+  margin: 5px;
+}
+.valor {
+  margin-right: -15px !important;
+}
 .encabezado-principal {
-  background-color: #5583a9;
+  background-color: #17a2b8;
   color: #fafafa;
 }
 .encabezado {
@@ -37,4 +52,14 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+/* Small devices (portrait tablets and large phones, 600px) */
+@media only screen and (max-width: 600px) {
+  .col-md-6,
+  .col-md-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

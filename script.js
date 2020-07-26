@@ -27,7 +27,7 @@ calcularIva = () => {
     saldoTecnicoAnterior;
 
   showSaldoTecnico = document.getElementById("saldotecnico-show");
-  showSaldoTecnico.innerHTML = saldoTecnico;
+  showSaldoTecnico.innerHTML = saldoTecnico.toFixed(2);
 
   //Calcular saldo libre disponibilidad
   saldoLibreDisponibilidad =
@@ -36,14 +36,16 @@ calcularIva = () => {
   showSaldoLibreDisponibilidad = document.getElementById("saldo-ld-show");
 
   if (saldoTecnico <= 0) {
-    showSaldoLibreDisponibilidad.innerHTML = saldoLibreDisponibilidad;
+    showSaldoLibreDisponibilidad.innerHTML = saldoLibreDisponibilidad.toFixed(
+      2
+    );
   }
 
   //Calcular saldo a pagar AFIP
   saldoAfip = saldoTecnico - saldoLibreDisponibilidad;
 
   showSaldoAfip = document.getElementById("saldo-afip-show");
-  showSaldoAfip.innerHTML = saldoAfip;
+  showSaldoAfip.innerHTML = saldoAfip.toFixed(2);
 };
 
 mostrarValores = () => {

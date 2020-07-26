@@ -90,7 +90,7 @@
         <div class="col-md-6">
           Saldo técnico a favor de AFIP (+) / del contribuyente (-)
         </div>
-        <div id="saldotecnico-show" class="col-md-3 data-container">0</div>
+        <div id="saldotecnico-show" class="col-md-6 data-container">0</div>
       </div>
       <br />
       <div class="row">
@@ -140,23 +140,30 @@
         <div class="col-md-6">
           Saldo de libre disponibilidad a favor del contribuyente
         </div>
-        <div id="saldo-ld-show" class="col-md-3 data-container">0</div>
+        <div id="saldo-ld-show" class="col-md-6 data-container">0</div>
       </div>
       <div class="row">
         <div class="col-md-6">
           Saldo a favor de AFIP (+) / del contribuyente (-)
         </div>
-        <div id="saldo-afip-show" class="col-md-3 data-container">0</div>
+        <div id="saldo-afip-show" class="col-md-6 data-container">0</div>
       </div>
       <br />
       <br />
-      <div class="row">
-        <div class="col-md-5"></div>
+      <div class="row calcular">
+        <div class="col-md-4"></div>
         <input
           id="calcular"
-          class="col-md-2 calcular"
+          class="col-md-2 btn btn-success"
           type="submit"
+          value="Calcular"
           onclick="calcularIva()"
+        />
+        <input
+          id="calcular"
+          class="col-md-2 btn btn-info"
+          type="reset"
+          value="Reestablecer"
         />
       </div>
     </form>
