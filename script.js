@@ -13,9 +13,6 @@ calcularIva = () => {
   var perAduaneras = document.getElementById("aduaneras-input").value * 1;
   var saldoLibreAnterior = document.getElementById("saldold-input").value * 1;
 
-  //Previene el submit del formulario
-  event.preventDefault();
-
   //Calcular saldo tecnico
   saldoTecnico =
     ivaVenta21 +

@@ -22,6 +22,7 @@ input {
 }
 .btn {
   margin: 5px;
+  cursor: pointer;
 }
 .valor {
   margin-right: -15px !important;
