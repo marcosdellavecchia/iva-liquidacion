@@ -152,3 +152,11 @@ mostrarValores = () => {
   showSaldoTecnicoAnterior.innerHTML = saldoTecnicoAnterior.toFixed(2);
   showSaldoLibreAnterior.innerHTML = saldoLibreAnterior.toFixed(2);
 };
+
+// Evita que el formulario se envíe cuando se presiona la tecla enter en el input
+liquidacion.onkeypress = (e) => {
+  var key = e.charCode || e.keyCode || 0;
+  if (key == 13) {
+    e.preventDefault();
+  }
+};
