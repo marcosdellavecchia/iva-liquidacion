@@ -44,7 +44,10 @@ calcularIva = () => {
 
   showSaldoLibreDisponibilidad = document.getElementById("saldo-ld-show");
 
-  if (saldoTecnico < saldoLibreDisponibilidad) {
+  if (saldoLibreDisponibilidad > Math.abs(saldoTecnico)) {
+    showSaldoLibreDisponibilidad.innerHTML =
+      saldoLibreDisponibilidad.toFixed(2) - saldoTecnico.toFixed(2);
+  } else if (saldoTecnico < 0) {
     showSaldoLibreDisponibilidad.innerHTML = saldoLibreDisponibilidad.toFixed(
       2
     );
